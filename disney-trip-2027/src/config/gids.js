@@ -1,11 +1,9 @@
-// GIDs for each tab of the trip Google Sheet.
+// GIDs for each tab of the published trip Google Sheet.
 // Open each tab in the browser and copy the number after "gid=" in the URL.
-// Leave a value as '' until that tab exists — the matching section will
-// just show its placeholder content instead of erroring.
 export const GIDS = {
-  tripInfo: '',
-  importantDates: '',
-  flights: '',
-  chaperones: '',
-  itinerary: '',
+  tripInfo: '496065496',
+  importantDates: '416420545',
+  flights: '135876866',
+  chaperones: '1901087019',
+  itinerary: '84174327',
 };

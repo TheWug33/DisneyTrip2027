@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { PUBLISHED_CSV_BASE } from '../config/sheet.js';
 
 // Minimal CSV parser — handles quoted fields, embedded commas, and escaped
 // double-quotes ("" -> "). Good enough for Google Sheets' CSV export.
@@ -85,7 +86,7 @@ export function useSheetTab(gid, fallback = []) {
       setLoading(false);
       return;
     }
-    fetch(`/api/sheet?gid=${gid}`)
+    fetch(`${PUBLISHED_CSV_BASE}&gid=${gid}`)
       .then((r) => {
         if (!r.ok) throw new Error(`Sheet fetch failed (${r.status})`);
         return r.text();
